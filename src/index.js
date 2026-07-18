@@ -1,5 +1,12 @@
 // index.js
 
+// Para actualizar gitHub, copiar y pegar:
+/*
+git add .
+git commit -m "Mensaje"
+git push origin main
+*/
+
 const express = require("express");
 const conectarDB = require('./config/db.js');
 
