@@ -1,0 +1,88 @@
+/* 
+    - fuentes y colores principales de la app
+    - diseño de partials (como la cabecera)
+    - estilos generales de botones o enlaces
+ */
+@font-face {
+    font-family: 'letra-general';      
+    src: url('/fonts/Handwriting.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-principal: #6D9C8A;
+    --fuente-principal: 'letra-general', sans-serif;
+    --tamano-base: 1.4rem;
+    --color-boton: #D78A5E;
+    --color-boton_hover: #b65f2c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: var(--fuente-principal);
+    font-size: var(--tamano-base);
+    line-height: 1.5;
+    /* ---*/ 
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+main{
+    overflow-y: auto; /* Permite el scroll vertical aquí dentro si hay muchos tuppers */
+    flex: 1;
+    background-color: var(--color-principal);
+    background-size: cover;       /* Fuerza a la imagen a cubrir toda la pantalla sin deformarse */
+    background-position: top center;  /* Centra la imagen para que se vea bien en vertical (móvil) */
+    background-repeat: no-repeat; /* Evita que la imagen se repita como un mosaico */
+    background-attachment: scroll;
+    /* ⚠️ MUY IMPORTANTE: Dejamos un margen abajo igual al alto de la cabecera 
+       para que el último tupper no se quede tapado detrás de ella */
+    padding-bottom: 20dvh;
+}
+
+
+button{
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-boton);
+    border-color: var(--color-boton);
+}
+button:hover{
+    background-color: var(--color-boton_hover);
+    }
+
+/* ==========================================================================
+    Cabecera
+========================================================================== */
+
+.cabecera-principal{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;  /* para estar siempre por encima*/
+    min-height: 20vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-principal);
+    border-top-color: #41695a;
+    border-top-style: dotted;
+    border-top-width: 5px;
+
+    .cabecera-principal_volver{
+        
+    }
+    .cabecera-principal_titulo{
+        text-align: center;
+        font-size: 2rem;
+    }
+}

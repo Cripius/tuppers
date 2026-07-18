@@ -1,0 +1,144 @@
+:root {
+    --color-principal: #6D9C8A;
+    --tamaño-base: 20px;
+    --color-boton: #D78A5E;
+    --color-boton_hover: #B87C84;
+    --color-gris: #A6A7A9;
+    --color-azul: #7D8DAF;
+}
+
+
+/* ==========================================================================
+1. INICIO
+========================================================================== */
+
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/nevera.png'); 
+
+}
+.inicio-contenedor-botones{
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20dvh;
+
+    .inicio-boton{
+        padding: 0.7rem;
+        font-size: 170%;
+        border-radius: 15%;
+    }
+}
+
+
+/* ==========================================================================
+2. FORMULARIO (nuevoT)
+========================================================================== */
+.nuevoT{
+    background-image: url('/images/nevera.png'); 
+}
+
+.contenedor-formulario{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    .contenedor-formulario_fondo{
+        background-image: url("/images/nota.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .formulario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 7%;
+        /* background-color: lightyellow; */
+        padding: 1.5rem 2rem 4rem 3.5rem;
+
+    }
+    .contenedor-formulario_div{
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor-formulario_button{
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        min-height: 3.5rem;
+        gap: 10%;
+        button{
+            flex:1;
+        }
+    }
+}
+
+input[type="text"], input[type="date"], select, textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: rgba(255, 255, 255, 0.3); 
+    border: none;
+    border-bottom: 2px dashed var(--color-azul); 
+    height: 2.5rem; 
+    padding-left: 0.5rem;
+    outline: none; /* Evita que el navegador ponga su propio borde azul al pulsar */
+    border-radius: 4px 4px 0 0; 
+}
+
+textarea {
+    height: 4rem;}
+
+/* CUANDO PULSAMOS SE ILUMINA*/
+input[type="text"]:focus, input[type="date"]:focus, select:focus, textarea:focus {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 3px solid var(--color-boton); /* Cambia el color de la línea a tu naranja */
+}
+input[type="checkbox"]{
+    accent-color: var(--color-principal);
+    width: 20px;
+    height: 20px;
+
+}
+
+
+
+
+
+/* ==========================================================================
+3. LISTA (verT)
+========================================================================== */
+
+.contenedor-tuppers{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);       
+    gap: 1rem; 
+    padding: 10px;
+    list-style: none;
+    .tupper{
+        white-space: normal;
+        word-break: break-word; 
+        overflow-wrap: break-word;
+        background-color: #508772; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
+
+/* ==========================================================================
+3. SUGERENCIAS
+========================================================================== */
+
+.sugerencias{
+    padding: 1rem;
+    background-image: url(/images/nota.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2rem 1rem 0rem 4rem;
+}

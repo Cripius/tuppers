@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="stylesheet" href="/paginas/pages.css">
+    <title>Alacena</title>
+</head>
+<body>
+    <main>
+        <ul class="contenedor-tuppers">
+        <% tuppers.forEach(tupper => { %>
+            <li class="tupper">
+                <p class="tupper_nombre"><%= tupper.nombre %></p>
+                <form action="/tuppers/eliminar/<%= tupper.id %>" method="post" style="display: inline;">
+                    <button class="tupper_boton-eliminar" type="submit" onclick="return confirm('¿Seguro que quieres eliminarlo de la lista?')">
+                        🗑️ Eliminar
+                    </button>
+                </form>
+            </li>
+        <% }) %>
+        <a href="/tuppers/nuevo-tupper">➕ Añadir otro tupper</a> 
+        </ul>
+        
+    </main>
+    <%- include("../../partials/cabecera.ejs", { titulo: "Tuppers disponibles" }) %>
+</body>
+</html>

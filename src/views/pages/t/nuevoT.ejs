@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="stylesheet" href="/paginas/pages.css">
+    <title>Inicio</title>
+</head>
+<body class="nuevoT">
+    <main class="nuevoT">
+        <div class="contenedor-formulario">
+            <div class="contenedor-formulario_fondo">
+                <form class="formulario" action="/tuppers/nuevo-tupper" method="POST">
+                    <div class="contenedor-formulario_div">
+                        <label for="nombre">Etiqueta del tupper: </label>
+                        <input type="text" name="nombre" id="nombre" required>
+                    </div>
+                    <div class="contenedor-formulario_div">
+                        <label for="fecha_cocinado">Fecha de cocinado:</label>
+                        <input type="date" name="fecha_cocinado" id="fecha_cocinado">
+                    </div>
+                    <div class="contenedor-formulario_div">
+                        <label for="tipo_comida">Tipo de comida:</label>
+                        <select name="tipo_comida" id="tipo_comida">
+                            <option value="legumbres">Legumbres</option>
+                            <option value="verduras">Verduras</option>
+                            <option value="carne">Carne</option>
+                            <option value="pescado">Pescado</option> 
+                            <option value="sopa">Sopitas</option>
+                            <option value="otro">Otro</option>                  
+                        </select>
+                    </div>
+                    <div>
+                        <label for="congelado">¿Está congelado?</label>
+                        <input type="checkbox" name="congelado" id="congelado" checked>
+                    </div>
+                    <div class="contenedor-formulario_div">
+                        <label for="notas">Añadir alguna nota:</label>
+                        <textarea name="notas" id="notas" placeholder="¿Algún detalle más? Por ejemplo: sin sal, picante..."></textarea>
+                    </div>
+                </div>    
+                <div class="contenedor-formulario_button">
+                    <button type="reset">Cancelar</button>
+                    <button type="submit">Enviar</button>                    
+                </div>
+                </form>
+        </div>
+    </main>
+    
+    <script>
+        // Pone por defecto la fecha de hoy en el input!!
+        const hoy = new Date().toISOString().split('T')[0];
+        document.getElementById('fecha_cocinado').value = hoy;
+    </script>
+    <%- include("../../partials/cabecera.ejs", { titulo: "Aquí puedes añadir tuppers" }) %>
+</body>
+</html>
