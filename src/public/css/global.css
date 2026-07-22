@@ -29,6 +29,7 @@ body{
     font-family: var(--fuente-principal);
     font-size: var(--tamano-base);
     line-height: 1.5;
+    background-color: var(--color-principal);
     /* ---*/ 
     display: flex;
     flex-direction: column;

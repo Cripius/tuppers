@@ -142,10 +142,26 @@ input[type="checkbox"]{
 3. SUGERENCIAS
 ========================================================================== */
 
-.sugerencias{
-    padding: 1rem;
-    background-image: url(/images/nota.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 2rem 1rem 0rem 4rem;
-}
+.main-sugerencias{
+        background-image: url(/images/nota.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        max-width: 450px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        .contenedor-sugerencias {
+            height: 80vh; 
+            max-height: 600px;
+            width: 100%;
+            background-position: center;
+            padding-bottom: 6rem;
+            .contenedor-texto {
+                padding: 2rem 2rem 2rem 3rem;
+                height: 100%;
+                overflow-y: auto;  /* Permite scroll si hay muchas sugerencias */
+                box-sizing: border-box;
+            }
+        }
+    }
