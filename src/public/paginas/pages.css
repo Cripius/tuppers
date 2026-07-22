@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
     background-image: url('/images/nevera.png'); 
-
+    background-size: contain;
 }
 .inicio-contenedor-botones{
     display: flex;
@@ -33,7 +33,6 @@
         border-radius: 15%;
     }
 }
-
 
 /* ==========================================================================
 2. FORMULARIO (nuevoT)
@@ -128,6 +127,14 @@ input[type="checkbox"]{
         align-items: center;
         justify-content: center;
         
+    }
+}
+
+@media (min-width: 768px){
+    .contenedor-tuppers{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
     }
 }
 
