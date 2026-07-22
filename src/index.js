@@ -3,7 +3,7 @@
 // Para actualizar gitHub, copiar y pegar:
 /*
 git add .
-git commit -m "inicio Responsive Design ordenador"
+git commit -m "sugerencias Responsive Design ordenador"
 git push origin main
 */
 
